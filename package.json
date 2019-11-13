@@ -1,0 +1,38 @@
+{
+  "name": "url-gen",
+  "version": "1.0.0",
+  "description": "Unique url generator",
+  "main": "./lib/index.js",
+  "types": "./lib/index.d.ts",
+  "scripts": {
+    "build": "npm run clean && npm run build-ts && npm run tslint",
+    "clean": "./node_modules/.bin/rimraf .nyc_output gen lib",
+    "build-ts": "tsc -p ./tsconfig.lib.json",
+    "tslint": "tslint -c tslint.json -p tsconfig.json",
+    "test": "jest --detectOpenHandles --coverage --verbose",
+    "e2e": "node ./e2e.js"
+  },
+  "keywords": [
+    "typescript",
+    "unique",
+    "url"
+  ],
+  "author": "ekarpovs",
+  "license": "ISC",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "uuid62": "^1.0.1"
+  },
+  "devDependencies": {
+    "@types/bcryptjs": "^2.4.2",
+    "@types/jest": "^24.0.23",
+    "@types/supertest": "^2.0.8",
+    "jest": "^24.9.0",
+    "rimraf": "^3.0.0",
+    "supertest": "^4.0.2",  
+    "ts-jest": "^24.1.0",
+    "ts-node": "^8.5.0",
+    "tslint": "^5.20.1",
+    "typescript": "^3.7.2"
+  }
+}
