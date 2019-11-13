@@ -41,6 +41,17 @@ npm run e2e
 
 ```bash
 var gen = require('./lib/index');
-gen.generateUrl().then((u) => console.log(u));
+
+gen.generateUrl('https', destHostName, destPort).then((u) => console.log(u));
+
+default values
+protocol = 'http';
+host = 'localHost';
+port = '3800';
+```
+Will generate output like
+
+```bash
+https://destHostName:destPort/JDJhJDEwJDNKbnp6cmUzTDZFZW5hSzhhOS50SWVrT0gyQThIb251N2ZuVVZxMVg2dzhKR0ZQeUVNUzY2
 ```
 
