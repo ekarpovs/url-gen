@@ -4,13 +4,14 @@
 
 npm install
 
-## e2e test
+## Commands
+
+Buld
 
 ```bash
-npm run e2e
+npm run build
 ```
 
-## Other commands
 
 Run the linter manually:
 
@@ -29,3 +30,17 @@ Run the tests:
 ```bash
 npm run test
 ```
+
+Run e2e test
+
+```bash
+npm run e2e
+```
+
+## Usage
+
+```bash
+var gen = require('./lib/index');
+gen.generateUrl().then((u) => console.log(u));
+```
+
