@@ -1,6 +1,7 @@
 *.log
-pids
+lib
 logs
+pids
 results
 tmp
 
